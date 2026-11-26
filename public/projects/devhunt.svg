@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <!-- Illustration: hackathon DEVHUNT — code + accessibilité -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#170b2e"/>
+      <stop offset="1" stop-color="#2a0b25"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.64" cy="0.36" r="0.55">
+      <stop offset="0" stop-color="#a855f7" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c084fc"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+
+  <!-- Main composition, shifted left so cards (which show the left 4:3) keep the right bracket -->
+  <g transform="translate(-120 -20)">
+  <!-- Code brackets -->
+  <g fill="none" stroke="#c084fc" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.9">
+    <path d="M700 230 L560 380 L700 530"/>
+    <path d="M1300 230 L1440 380 L1300 530"/>
+  </g>
+
+  <!-- Accessibility symbol in a ring -->
+  <g transform="translate(1000 380)">
+    <circle r="210" fill="#ffffff" fill-opacity="0.04"/>
+    <circle r="190" fill="none" stroke="url(#ring)" stroke-width="22"/>
+    <circle cy="-96" r="30" fill="#ffffff"/>
+    <path d="M-110 -44 C-40 -24 40 -24 110 -44" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round"/>
+    <path d="M0 -30 V40" stroke="#ffffff" stroke-width="30" stroke-linecap="round"/>
+    <path d="M0 40 L-50 140 M0 40 L50 140" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  </g>
+
+  <!-- Sparkles / team energy -->
+  <g fill="#f9a8d4">
+    <path d="M520 660 l10 26 26 10 -26 10 -10 26 -10 -26 -26 -10 26 -10z"/>
+    <path d="M1380 650 l7 18 18 7 -18 7 -7 18 -7 -18 -18 -7 18 -7z"/>
+    <path d="M1180 110 l6 15 15 6 -15 6 -6 15 -6 -15 -15 -6 15 -6z"/>
+  </g>
+  <g fill="#c084fc" fill-opacity="0.7">
+    <circle cx="640" cy="160" r="8"/>
+    <circle cx="1460" cy="200" r="6"/>
+    <circle cx="820" cy="700" r="7"/>
+    <circle cx="1240" cy="760" r="9"/>
+  </g>
+
+  <!-- Terminal line -->
+  <g transform="translate(600 650)">
+    <rect width="620" height="70" rx="35" fill="#ffffff" fill-opacity="0.06" stroke="#c084fc" stroke-opacity="0.3" stroke-width="2"/>
+    <path d="M36 24 L54 35 L36 46" fill="none" stroke="#ec4899" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="76" y="29" width="220" height="12" rx="6" fill="#ffffff" fill-opacity="0.55"/>
+    <rect x="310" y="29" width="120" height="12" rx="6" fill="#c084fc" fill-opacity="0.8"/>
+    <rect x="444" y="22" width="12" height="26" rx="2" fill="#ec4899"/>
+  </g>
+</svg>
