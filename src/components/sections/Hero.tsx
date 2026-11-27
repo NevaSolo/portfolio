@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import MagneticButton from "@/components/ui/MagneticButton";
+import { useSiteEntered } from "@/lib/siteEnter";
 
 const LampCanvas = dynamic(() => import("@/components/three/LampCanvas"), {
   ssr: false,
@@ -13,6 +14,9 @@ const LaptopCanvas = dynamic(() => import("@/components/three/LaptopCanvas"), {
 });
 
 export default function Hero() {
+  // Intro animations wait for the loader's "Start" click.
+  const entered = useSiteEntered();
+
   return (
     <section
       id="home"
@@ -28,7 +32,7 @@ export default function Hero() {
         <div className="pointer-events-auto min-w-0">
           <motion.p
             initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={entered ? { opacity: 1, y: 0 } : undefined}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xs uppercase tracking-[0.35em] text-accent"
           >
@@ -42,7 +46,7 @@ export default function Hero() {
                 <motion.span
                   className="block text-glow"
                   initial={{ y: "110%" }}
-                  animate={{ y: 0 }}
+                  animate={entered ? { y: 0 } : undefined}
                   transition={{ duration: 0.9, delay: 0.3 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
                 >
                   {word}
@@ -53,7 +57,7 @@ export default function Hero() {
 
           <motion.p
             initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={entered ? { opacity: 1, y: 0 } : undefined}
             transition={{ duration: 0.6, delay: 0.7 }}
             className="mt-8 max-w-lg text-base leading-relaxed text-fg-dim md:text-lg"
           >
@@ -64,7 +68,7 @@ export default function Hero() {
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={entered ? { opacity: 1, y: 0 } : undefined}
             transition={{ duration: 0.6, delay: 0.85 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
@@ -80,7 +84,7 @@ export default function Hero() {
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          animate={entered ? { opacity: 1, scale: 1 } : undefined}
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="pointer-events-auto relative order-first lg:order-last"
         >
@@ -90,7 +94,7 @@ export default function Hero() {
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={entered ? { opacity: 1 } : undefined}
         transition={{ delay: 1.4, duration: 0.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-fg-mute"
       >

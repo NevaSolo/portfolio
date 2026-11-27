@@ -41,9 +41,6 @@ export const metadata: Metadata = {
     description:
       "Portfolio de Faneva Solomampionona, développeur Full Stack et développeur IA spécialisé dans les applications web modernes et les solutions intelligentes.",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

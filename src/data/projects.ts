@@ -51,9 +51,10 @@ export const PROJECTS: Project[] = [
     category: "Application Web",
     year: "2024",
     description:
-      "Application web permettant de suivre en temps réel le trafic du crédit au sein de l'entreprise.",
+      "Application web permettant de suivre en temps réel le trafic du crédit au sein de l'agence : échéances du jour et retards en un coup d'œil, paiements, pénalités et remboursements anticipés, dossier client complet (photo, pièces, garanties), avec un accès réservé au personnel et des actions tracées.",
     technologies: ["Full Stack", "Base de données"],
-    image: "/projects/credit-traffic.svg",
+    demo: "https://credit.75-119-136-160.nip.io/",
+    image: "/projects/credit-traffic.jpg",
   },
   {
     id: "mi-camp",
